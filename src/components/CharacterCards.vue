@@ -64,11 +64,11 @@ export default {
         console.error(error)
       }
     };
-    const charactersOrdered= computed(() => orderBy(characters.value, orderKey.value));
+    const charactersOrdered = computed(() => orderBy(characters.value, orderKey.value));
 
     return { setOrderKey, fetchAllCharacters, loadingState, charactersOrdered };
   },
-  mounted() {
+  created() {
     this.fetchAllCharacters();
   },
 }
